@@ -5,7 +5,9 @@ const WebSocket = require("ws");
 const { Readable, Writable } = require("stream");
 const PORT = 8080;
 
+//Created the HTTP server
 const server = http.createServer(app);
+// Create a WebSocket server instance using the provided HTTP server
 const wsServer = new WebSocket.Server({ server });
 
 // Readable stream to handle incoming messages from WebSocket
